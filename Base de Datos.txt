@@ -1,0 +1,18 @@
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    nombre_usuario VARCHAR(50) UNIQUE NOT NULL,
+    contraseña VARCHAR(255) NOT NULL,
+    correo_electronico VARCHAR(100) UNIQUE NOT NULL,
+    rol VARCHAR(20) NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE empleados (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
+    identificacion VARCHAR(20) UNIQUE NOT NULL,
+    telefono VARCHAR(20),
+    salario DECIMAL(10, 2) NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
